@@ -1,0 +1,22 @@
+# Arquivos gerados pelo sistema operacional
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Binários compilados do Go
+*.exe
+*.exe~
+*.dll
+/backend/portfolio
+/backend/portfolio.exe
+
+# Configurações pessoais de editor
+.vscode/
+.idea/
+
+# Variáveis de ambiente e segredos
+.env
+*.local
+
+# Logs
+*.log
