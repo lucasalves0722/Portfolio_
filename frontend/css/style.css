@@ -22,6 +22,7 @@ body {
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
     line-height: 1.6;
+    padding-top: 70px;
 }
 
 /* HERO */
@@ -155,4 +156,45 @@ body {
 
 .sobre__conteudo p:last-child {
     margin-bottom: 0;
+}
+
+/* ===== MENU ===== */
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: rgba(13, 17, 23, 0.9);
+    backdrop-filter: blur(8px);
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu__logo {
+    color: var(--cor-destaque);
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+.menu__lista {
+    display: flex;
+    gap: var(--espaco-grande);
+    list-style: none;
+}
+
+.menu__lista a {
+    color: var(--cor-texto);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.menu__lista a:hover {
+    color: var(--cor-destaque);
 }
