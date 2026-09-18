@@ -117,3 +117,42 @@ body {
     }
 }
 
+/* SOBRE MIM */
+
+.secao__titulo {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.secao__titulo::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--cor-destaque);
+    margin: 0.8rem auto 0;
+    border-radius: 2px;
+}
+
+.sobre {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem 2rem;
+}
+
+.sobre__conteudo {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.sobre__conteudo p {
+    margin-bottom: 1.2rem;
+    color: var(--cor-texto-secundario);
+    font-size: 1.05rem;
+}
+
+.sobre__conteudo p:last-child {
+    margin-bottom: 0;
+}
