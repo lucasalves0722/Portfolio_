@@ -158,3 +158,20 @@ function mostrarDicaDeArraste() {
     track.style.transform = 'translateX(0%)';
   }, 500);
 }
+
+const secoesReveal = document.querySelectorAll('.reveal-esquerda');
+
+const observadorReveal = new IntersectionObserver(function (entradas) {
+  entradas.forEach(function (entrada) {
+    if (entrada.isIntersecting) {
+      entrada.target.classList.add('reveal-visivel');
+      observadorReveal.unobserve(entrada.target);
+    }
+  });
+}, {
+  threshold: 0.15
+});
+
+secoesReveal.forEach(function (secao) {
+  observadorReveal.observe(secao);
+});
