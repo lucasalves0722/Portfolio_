@@ -132,3 +132,29 @@ formulario.addEventListener('submit', function (evento) {
 
   formulario.reset();
 });
+
+const secaoSobre = document.getElementById('sobre');
+let dicaDeArrasteMostrada = false;
+
+const observador = new IntersectionObserver(function (entradas) {
+  entradas.forEach(function (entrada) {
+    if (entrada.isIntersecting && !dicaDeArrasteMostrada) {
+      dicaDeArrasteMostrada = true;
+      mostrarDicaDeArraste();
+      observador.disconnect();
+    }
+  });
+}, {
+  threshold: 0.6
+});
+
+observador.observe(secaoSobre);
+
+function mostrarDicaDeArraste() {
+  track.style.transition = 'transform 0.5s ease';
+  track.style.transform = 'translateX(-8%)';
+
+  setTimeout(function () {
+    track.style.transform = 'translateX(0%)';
+  }, 500);
+}
