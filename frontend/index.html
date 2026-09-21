@@ -6,6 +6,7 @@
     <title>Lucas Alves | Dev</title>
     <meta name="description" content="Portfólio de Lucas Alves, desenvolvedor de software. Confira projetos, tecnologias e formas de contato.">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 <body>
     <nav class="menu" id="menu-topo">
@@ -35,15 +36,63 @@
     </header>
 
     <section class="sobre" id="sobre">
-        <h2 class="secao__titulo">Sobre mim</h2>
+      <h2 class="secao__titulo sobre__titulo" id="sobre-titulo">Sobre mim</h2>
 
-        <div class="sobre__conteudo">
-            <p>Atuo há 1 ano como Analista de Suporte de Sistemas, prestando suporte a um software de gerenciamento de pátio. Essa é minha primeira experiência profissional na área de tecnologia, iniciada como estagiário e com efetivação após apenas dois meses.</p>
+      <div class="sobre__slider">
+        <div class="sobre__track" id="sobre-track">
 
-            <p> Ao longo dessa experiência, desenvolvi uma visão prática sobre sistemas, análise de problemas, atendimento técnico e entendimento de processos, além de manter contato constante com diferentes aspectos da tecnologia.</p>
+          <div class="sobre__slide">
+            <div class="sobre__conteudo">
+              <p>Atuo há 1 ano como Analista de Suporte de Sistemas, prestando suporte a um software de gerenciamento de pátio. Essa é minha primeira experiência profissional na área de tecnologia, iniciada como estagiário e com efetivação após apenas dois meses.</p>
+              <p>Ao longo dessa experiência, desenvolvi uma visão prática sobre sistemas, análise de problemas, atendimento técnico e entendimento de processos, além de manter contato constante com diferentes aspectos da tecnologia.</p>
+              <p>Atualmente, concilio minha rotina profissional com os estudos de programação e desenvolvimento de software, direcionando minha carreira para a área de Desenvolvimento Full Stack.</p>
+            </div>
+          </div>
 
-            <p>Atualmente, concilio minha rotina profissional com os estudos de programação e desenvolvimento de software, direcionando minha carreira para a área de Desenvolvimento Full Stack. Tenho buscado evoluir continuamente por meio de estudos e projetos próprios, colocando em prática os conhecimentos adquiridos e construindo, gradualmente, minha experiência como desenvolvedor.</p>
+          <div class="sobre__slide">
+            <div class="tech-grade">
+              <div class="tech-item">
+                <i class="devicon-html5-plain colored"></i>
+                <span>HTML</span>
+              </div>
+              <div class="tech-item">
+                <i class="devicon-css3-plain colored"></i>
+                <span>CSS</span>
+              </div>
+              <div class="tech-item">
+                <i class="devicon-go-original-wordmark colored"></i>
+                <span>Go</span>
+              </div>
+              <div class="tech-item">
+                <i class="devicon-mariadb-plain colored"></i>
+                <span>MariaDB</span>
+              </div>
+              <div class="tech-item">
+                <i class="devicon-javascript-plain colored"></i>
+                <span>JavaScript</span>
+              </div>
+              <div class="tech-item">
+                <i class="devicon-react-original colored"></i>
+                <span>React</span>
+              </div>
+              <div class="tech-item">
+                <i class="devicon-mysql-plain colored"></i>
+                <span>MySQL</span>
+              </div>
+              <div class="tech-item">
+                <i class="devicon-git-plain colored"></i>
+                <span>Git</span>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
+
+      <div class="sobre__indicadores">
+        <button class="indicador indicador--ativo" data-slide="0" aria-label="Ver Sobre mim"></button>
+        <button class="indicador" data-slide="1" aria-label="Ver Principais tecnologias"></button>
+      </div>
     </section>
 
     <section class="projetos" id="projetos">
@@ -109,8 +158,8 @@
       <p class="github-destaque__texto">
         Todo o código dos meus projetos está disponível publicamente no GitHub — incluindo este portfólio. Sinta-se à vontade para explorar os repositórios, ver o histórico de commits e conferir como cada projeto foi construído.
       </p>
-      <a href="https://github.com/lucasalves0722" target="_blank" rel="noopener" class="botao botao--primario">Ver meus repositórios</a>
-  </section>
+      <a href="https://github.com/lucasalves0722?tab=repositories" target="_blank" rel="noopener" class="botao botao--primario">Ver meus repositórios</a>
+    </section>
 
     <script src="js/script.js"></script>
 

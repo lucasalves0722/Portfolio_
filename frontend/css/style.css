@@ -158,6 +158,110 @@ body {
     margin-bottom: 0;
 }
 
+#sobre-titulo::after {
+  display: none;
+}
+
+/* ===== SOBRE MIM - SLIDER ===== */
+
+.sobre__slider {
+  overflow: hidden;
+  max-width: 700px;
+  margin: 0 auto;
+  cursor: grab;
+}
+
+.sobre__slider:active {
+  cursor: grabbing;
+}
+
+.sobre__track {
+  display: flex;
+  width: 200%;
+  transition: transform 0.4s ease;
+}
+
+.sobre__slide {
+  width: 50%;
+  flex-shrink: 0;
+  padding: 0 0.5rem;
+  user-select: none;
+}
+
+.sobre__conteudo p {
+  margin-bottom: 1.2rem;
+  color: var(--cor-texto-secundario);
+  font-size: 1.05rem;
+}
+
+.sobre__conteudo p:last-child {
+  margin-bottom: 0;
+}
+
+/* Grade de tecnologias */
+
+.tech-grade {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.tech-item {
+  background: #161b22;
+  border: 1px solid #2d3744;
+  border-radius: 10px;
+  padding: 1.2rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.tech-item:hover {
+  border-color: var(--cor-destaque);
+  transform: translateY(-3px);
+}
+
+.tech-item i {
+  font-size: 2.2rem;
+}
+
+.tech-item span {
+  font-size: 0.85rem;
+  color: var(--cor-texto-secundario);
+}
+
+/* Indicadores */
+
+.sobre__indicadores {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+.indicador {
+  width: 40px;
+  height: 4px;
+  border: none;
+  border-radius: 2px;
+  background: #2d3744;
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.2s;
+}
+
+.indicador--ativo {
+  background: var(--cor-destaque);
+}
+
+@media (max-width: 600px) {
+  .tech-grade {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* ===== MENU ===== */
 
 .menu {
@@ -198,8 +302,6 @@ body {
 .menu__lista a:hover {
     color: var(--cor-destaque);
 }
-
-/* ===== PROJETOS ===== */
 
 /* ===== PROJETOS ===== */
 
