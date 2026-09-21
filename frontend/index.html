@@ -161,6 +161,30 @@
       <a href="https://github.com/lucasalves0722?tab=repositories" target="_blank" rel="noopener" class="botao botao--primario">Ver meus repositórios</a>
     </section>
 
+    <section class="contato" id="contato">
+      <h2 class="secao__titulo">Entre em contato</h2>
+
+      <div class="contato__caixa">
+        <form id="formulario-contato" novalidate>
+
+          <div class="campo" id="campo-nome">
+            <label for="nome">Nome ou empresa</label>
+            <input type="text" id="nome" name="nome" placeholder="Como posso te chamar?">
+            <span class="campo__erro">Por favor, preencha seu nome ou empresa.</span>
+          </div>
+
+          <div class="campo" id="campo-mensagem">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte um pouco sobre o motivo do contato..."></textarea>
+            <span class="campo__erro">Por favor, escreva uma mensagem.</span>
+          </div>
+
+          <button type="submit" class="botao botao--primario contato__botao">Enviar pelo WhatsApp</button>
+
+        </form>
+      </div>
+    </section>
+
     <script src="js/script.js"></script>
 
 </body>

@@ -89,3 +89,46 @@ slider.addEventListener('pointerleave', function () {
     irParaSlide(slideAtual);
   }
 });
+
+const NUMERO_WHATSAPP = '5581997957754';
+
+const formulario = document.getElementById('formulario-contato');
+const campoNome = document.getElementById('campo-nome');
+const campoMensagem = document.getElementById('campo-mensagem');
+const inputNome = document.getElementById('nome');
+const inputMensagem = document.getElementById('mensagem');
+
+formulario.addEventListener('submit', function (evento) {
+  evento.preventDefault();
+
+  const nome = inputNome.value.trim();
+  const mensagem = inputMensagem.value.trim();
+
+  let formularioValido = true;
+
+  if (nome === '') {
+    campoNome.classList.add('campo--invalido');
+    formularioValido = false;
+  } else {
+    campoNome.classList.remove('campo--invalido');
+  }
+
+  if (mensagem === '') {
+    campoMensagem.classList.add('campo--invalido');
+    formularioValido = false;
+  } else {
+    campoMensagem.classList.remove('campo--invalido');
+  }
+
+  if (!formularioValido) {
+    return;
+  }
+
+  const textoCompleto = `Olá, Lucas!\n\nMeu nome/empresa é ${nome}.\n\nMensagem:\n${mensagem}`;
+  const textoCodificado = encodeURIComponent(textoCompleto);
+  const linkWhatsApp = `https://wa.me/${NUMERO_WHATSAPP}?text=${textoCodificado}`;
+
+  window.open(linkWhatsApp, '_blank');
+
+  formulario.reset();
+});
