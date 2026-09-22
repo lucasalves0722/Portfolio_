@@ -46,18 +46,24 @@ body {
     flex-shrink: 0;
 }
 
-.hero__cargo {
+/*.hero__cargo {
     color: var(--cor-destaque);
-    font-weight: bold;
-    font-size: 1.2rem;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    font-size: 0.30.5rem;
     margin-bottom: var(--espaco-pequeno);
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     text-transform: uppercase;
-}
+    opacity: 0.35;
+}*/
 
 .hero h1 {
     font-size: 2.8rem;
     margin-bottom: var(--espaco-medio);
+}
+
+.hero span {
+  color: var(--cor-destaque);
 }
 
 .hero__frase {
@@ -185,6 +191,19 @@ body {
 .botao:hover {
     transform: translateY(-2px);
     opacity: 0.9; 
+}
+
+.botao--primario:hover {
+  box-shadow:
+      0 0 10px rgba(45, 212, 191, 0.4),
+      0 0 25px rgba(45, 212, 191, 0.3),
+      0 0 45px rgba(45, 212, 191, 0.2);
+}
+
+.botao--secundario:hover {
+    background-color: rgba(45, 212, 191, 0.08);
+    border-color: var(--cor-destaque);
+    box-shadow: 0 0 15px rgba(45, 212, 191, 0.15);
 }
 
 /* RESPONSIVIDADE */
@@ -426,6 +445,18 @@ body {
     font-weight: bold;
     font-size: 1.3rem;
     text-decoration: none;
+    opacity: 0.7;
+}
+
+.menu__logo span {
+  color: var(--cor-texto);
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 600;
+    font-size: 0.75rem;
+    margin-left: var(--espaco-pequeno);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.35;
 }
 
 .menu__lista {
