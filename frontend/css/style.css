@@ -413,26 +413,23 @@ body {
   width: 320px;
   display: flex;
   flex-direction: column;
-  transition: transform 0.2s, border-color 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .projeto:hover {
   transform: translateY(-4px);
-  border-color: var(--cor-destaque);
+  box-shadow: 0 12px 30px rgba(45, 212, 191, 0.25, green, blue, alpha);
 }
 
 .projeto__preview {
   height: 160px;
-  background: linear-gradient(135deg, #1c2530, #0d1117);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 1rem;
-  color: var(--cor-texto-secundario);
-  font-size: 0.95rem;
-  font-weight: bold;
+  width: 100%;
+  object-fit: cover;
+  display: block;
   border-bottom: 1px solid #2d3744;
+
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 
 .projeto__corpo {
