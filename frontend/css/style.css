@@ -302,12 +302,67 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 0.6rem;
-  transition: border-color 0.2s, transform 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s
 }
 
 .tech-item:hover {
-  border-color: var(--cor-destaque);
-  transform: translateY(-3px);
+  transform: translateY(-4px);
+}
+
+.tech-item:nth-child(1):hover {
+    box-shadow:
+        0 0 10px rgba(227, 79, 38, 0.4),
+        0 0 25px rgba(227, 79, 38, 0.3),
+        0 0 45px rgba(227, 79, 38, 0.2);
+}
+
+.tech-item:nth-child(2):hover {
+    box-shadow:
+        0 0 10px rgba(21, 114, 182, 0.4),
+        0 0 25px rgba(21, 114, 182, 0.3),
+        0 0 45px rgba(21, 114, 182, 0.2);
+}
+
+.tech-item:nth-child(3):hover {
+    box-shadow:
+        0 0 10px rgba(0, 173, 216, 0.4),
+        0 0 25px rgba(0, 173, 216, 0.3),
+        0 0 45px rgba(0, 173, 216, 0.2);
+}
+
+.tech-item:nth-child(4):hover {
+    box-shadow:
+        0 0 10px rgba(0, 137, 123, 0.4),
+        0 0 25px rgba(0, 137, 123, 0.3),
+        0 0 45px rgba(0, 137, 123, 0.2);
+}
+
+.tech-item:nth-child(5):hover {
+    box-shadow:
+        0 0 10px rgba(247, 223, 30, 0.4),
+        0 0 25px rgba(247, 223, 30, 0.3),
+        0 0 45px rgba(247, 223, 30, 0.2);
+}
+
+.tech-item:nth-child(6):hover {
+    box-shadow:
+        0 0 10px rgba(97, 218, 251, 0.4),
+        0 0 25px rgba(97, 218, 251, 0.3),
+        0 0 45px rgba(97, 218, 251, 0.2);
+}
+
+.tech-item:nth-child(7):hover {
+    box-shadow:
+        0 0 10px rgba(0, 117, 143, 0.4),
+        0 0 25px rgba(0, 117, 143, 0.3),
+        0 0 45px rgba(0, 117, 143, 0.2);
+}
+
+.tech-item:nth-child(8):hover {
+    box-shadow:
+        0 0 10px rgba(240, 80, 50, 0.4),
+        0 0 25px rgba(240, 80, 50, 0.3),
+        0 0 45px rgba(240, 80, 50, 0.2);
 }
 
 .tech-item i {
@@ -417,8 +472,11 @@ body {
 }
 
 .projeto:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(45, 212, 191, 0.25, green, blue, alpha);
+  transform: translateY(-7px);
+  box-shadow: 
+        0 0 10px rgba(45, 212, 191, 0.4),
+        0 0 25px rgba(45, 212, 191, 0.3),
+        0 0 45px rgba(45, 212, 191, 0.2);
 }
 
 .projeto__preview {
