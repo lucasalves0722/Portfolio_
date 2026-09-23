@@ -674,31 +674,93 @@ body {
 
 /* ===== SELETOR DE IDIOMA ===== */
 
+/* ===== SELETOR DE IDIOMA ===== */
+
 .idioma-switch {
-  display: flex;
-  gap: 0.3rem;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 0.25rem;
-  border-radius: 8px;
-  margin-left: 1.5rem;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    gap: .2rem;
+
+    padding: .2rem;
+
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+
+    margin-left: 1.5rem;
+}
+
+/* Pílula que desliza */
+.idioma-switch::before {
+    content: "";
+
+    position: absolute;
+    top: .2rem;
+    left: .2rem;
+
+    width: 34px;
+    height: 28px;
+
+    background-color: var(--cor-destaque);
+    border-radius: 7px;
+
+    transition: transform .3s ease;
+
+    box-shadow: 0 0 10px rgba(45, 212, 191, 0.25);
+}
+
+/* Quando EN estiver ativo, move a pílula para a direita */
+.idioma-switch:has(
+    .idioma-opcao--ativa[data-idioma="en"]
+)::before {
+    transform: translateX(36px);
 }
 
 .idioma-opcao {
-  background: transparent;
-  border: none;
-  color: var(--cor-texto-secundario);
-  font-size: 0.8rem;
-  font-weight: bold;
-  padding: 0.3rem 0.6rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background 0.2s, color 0.2s;
+    position: relative;
+    z-index: 1;
+
+    width: 34px;
+    height: 28px;
+
+    border: none;
+    background: transparent;
+
+    color: var(--cor-texto-secundario);
+
+    border-radius: 7px;
+
+    font-size: .8rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        color .3s ease,
+        transform .2s ease;
 }
 
+/* Texto do idioma ativo */
 .idioma-opcao--ativa {
-  background: var(--cor-destaque);
-  color: var(--cor-fundo);
+    background-color: transparent;
+    color: var(--cor-fundo);
 }
+
+.idioma-opcao:hover {
+    color: var(--cor-texto);
+}
+
+.idioma-opcao--ativa:hover {
+    color: var(--cor-fundo);
+}
+
+.idioma-opcao:active {
+    transform: scale(.95);
+}
+
+
 
 /* ===== MENU HAMBÚRGUER ===== */
 
