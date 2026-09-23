@@ -800,3 +800,51 @@ body {
         display: flex;
     }
 }
+
+/* ===== BOTÃO VOLTAR AO TOPO ===== */
+
+.voltar-topo {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--cor-destaque);
+    color: var(--cor-fundo);
+
+    border: none;
+    border-radius: 50%;
+
+    font-size: 1.4rem;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+
+    transition:
+        opacity 0.3s,
+        visibility 0.3s,
+        transform 0.3s;
+}
+
+.voltar-topo.ativo {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.voltar-topo:hover {
+    transform: translateY(-3px);
+    box-shadow:
+        0 0 10px rgba(45, 212, 191, 0.4),
+        0 0 25px rgba(45, 212, 191, 0.3);
+}

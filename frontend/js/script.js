@@ -13,6 +13,25 @@ botaoMenu.addEventListener('click', function () {
 
 const linksMenu = document.querySelectorAll('.menu__lista a, .menu__logo');
 
+// ===== BOTÃO VOLTAR AO TOPO =====
+
+const botaoVoltarTopo = document.getElementById('voltar-topo');
+
+window.addEventListener('scroll', function () {
+    if (window.scrollY > 300) {
+        botaoVoltarTopo.classList.add('ativo');
+    } else {
+        botaoVoltarTopo.classList.remove('ativo');
+    }
+});
+
+botaoVoltarTopo.addEventListener('click', function () {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
+
 linksMenu.forEach(function (link) {
     link.addEventListener('click', function (evento) {
         const destino = link.getAttribute('href');
