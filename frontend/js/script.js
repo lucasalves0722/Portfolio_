@@ -5,6 +5,7 @@ const listaMenu = document.querySelector('.menu__lista');
 
 botaoMenu.addEventListener('click', function () {
     listaMenu.classList.toggle('ativo');
+    botaoMenu.classList.toggle('ativo');
 });
 
 
@@ -24,7 +25,7 @@ linksMenu.forEach(function (link) {
 
         // Fecha o menu mobile
         listaMenu.classList.remove('ativo');
-
+        botaoMenu.classList.remove('ativo');
         if (destino === '#menu-topo') {
             window.scrollTo({ top: 0, behavior: 'smooth' });
             return;
