@@ -15,17 +15,33 @@
 </head>
 <body>
     <nav class="menu" id="menu-topo">
-        <a href="#menu-topo" class="menu__logo">Lucas Alves <span>Dev</span></a>
-        <ul class="menu__lista">
-            <li><a href="#sobre" data-i18n="menu-sobre">Sobre</a></li>
-            <li><a href="#projetos" data-i18n="menu-projetos">Projetos</a></li>
-            <li><a href="#contato" data-i18n="menu-contato">Contato</a></li>
-        </ul>
-        <div class="idioma-switch" id="idioma-switch">
-            <button class="idioma-opcao idioma-opcao--ativa" data-idioma="pt">PT</button>
-            <button class="idioma-opcao" data-idioma="en">EN</button>
-        </div>
-    </nav>
+
+      <a href="#menu-topo" class="menu__logo">
+          Lucas Alves <span>Dev</span>
+      </a>
+
+      <ul class="menu__lista">
+          <li><a href="#sobre" data-i18n="menu-sobre">Sobre</a></li>
+          <li><a href="#projetos" data-i18n="menu-projetos">Projetos</a></li>
+          <li><a href="#contato" data-i18n="menu-contato">Contato</a></li>
+      </ul>
+
+      <div class="menu__acoes">
+
+          <div class="idioma-switch" id="idioma-switch">
+              <button class="idioma-opcao idioma-opcao--ativa" data-idioma="pt">PT</button>
+              <button class="idioma-opcao" data-idioma="en">EN</button>
+          </div>
+
+          <button class="menu__hamburguer" id="menu-hamburguer" aria-label="Abrir menu">
+              <span></span>
+              <span></span>
+              <span></span>
+          </button>
+
+      </div>
+
+  </nav>
 
     <header class="hero">
         <div class="hero__fundo" aria-hidden="true">
