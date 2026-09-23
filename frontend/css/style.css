@@ -672,4 +672,30 @@ body {
   transform: translateX(0);
 }
 
+/* ===== SELETOR DE IDIOMA ===== */
 
+.idioma-switch {
+  display: flex;
+  gap: 0.3rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.25rem;
+  border-radius: 8px;
+  margin-left: 1.5rem;
+}
+
+.idioma-opcao {
+  background: transparent;
+  border: none;
+  color: var(--cor-texto-secundario);
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.idioma-opcao--ativa {
+  background: var(--cor-destaque);
+  color: var(--cor-fundo);
+}

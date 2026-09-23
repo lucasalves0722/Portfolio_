@@ -17,11 +17,14 @@
     <nav class="menu" id="menu-topo">
         <a href="#menu-topo" class="menu__logo">Lucas Alves <span>Dev</span></a>
         <ul class="menu__lista">
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#contato">Contato</a></li>
+            <li><a href="#sobre" data-i18n="menu-sobre">Sobre</a></li>
+            <li><a href="#projetos" data-i18n="menu-projetos">Projetos</a></li>
+            <li><a href="#contato" data-i18n="menu-contato">Contato</a></li>
         </ul>
-
+        <div class="idioma-switch" id="idioma-switch">
+            <button class="idioma-opcao idioma-opcao--ativa" data-idioma="pt">PT</button>
+            <button class="idioma-opcao" data-idioma="en">EN</button>
+        </div>
     </nav>
 
     <header class="hero">
@@ -35,13 +38,12 @@
 
         <div class="hero__conteudo">
             <!--<p class="hero__cargo">Dev</p>-->  
-            <h1>Desenvolvedor de <span id="Software">Software</span></h1>
-            <p class="hero__frase">Desenvolvedor em formação, construindo projetos e aprendendo na prática todos os dias.</p>
-
+            <h1 data-i18n-html="hero-titulo">Desenvolvedor de <span class="hero__destaque">Software</span></h1>
+            <p class="hero__frase" data-i18n="hero-frase">Desenvolvedor em formação, construindo projetos e aprendendo na prática todos os dias.</p>
             <div class="hero__botoes">
-                <a href="#projetos" class="botao botao--primario">Ver projetos</a>
+                <a href="#projetos" class="botao botao--primario" data-i18n="hero-btn-projetos">Ver projetos</a>
                 <a href="https://github.com/lucasalves0722" target="_blank" rel="noopener" class="botao botao--secundario">GitHub</a>
-                <a href="https://www.linkedin.com/in/alveslucasm" target="_blank" rel="noopener" class="botao botao--secundario">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/alveslucasm" target="_blank"  class="botao botao--secundario" data-i18n="hero-btn-contato">Entre em contato</a>
             </div>    
         </div>
     </header>
@@ -54,9 +56,9 @@
 
           <div class="sobre__slide">
             <div class="sobre__conteudo">
-              <p>Atuo há 1 ano como Analista de Suporte de Sistemas, prestando suporte a um software de gerenciamento de pátio. Essa é minha primeira experiência profissional na área de tecnologia, iniciada como estagiário e com efetivação após dois meses.</p>
-              <p>Ao longo dessa experiência, desenvolvi uma visão prática sobre sistemas, análise de problemas, atendimento técnico e entendimento de processos, além de manter contato constante com diferentes aspectos da tecnologia.</p>
-              <p>Atualmente, concilio minha rotina profissional com os estudos de programação e desenvolvimento de software, direcionando minha carreira para a área de Desenvolvimento Full Stack.</p>
+              <p data-i18n="sobre-p1">Atuo há 1 ano como Analista de Suporte de Sistemas, prestando suporte a um software de gerenciamento de pátio. Essa é minha primeira experiência profissional na área de tecnologia, iniciada como estagiário e com efetivação após apenas dois meses.</p>
+              <p data-i18n="sobre-p2">Ao longo dessa experiência, desenvolvi uma visão prática sobre sistemas, análise de problemas, atendimento técnico e entendimento de processos, além de manter contato constante com diferentes aspectos da tecnologia.</p>
+              <p data-i18n="sobre-p3">Atualmente, concilio minha rotina profissional com os estudos de programação e desenvolvimento de software, direcionando minha carreira para a área de Desenvolvimento Full Stack.</p>
             </div>
           </div>
 
@@ -107,7 +109,7 @@
     </section>
 
     <section class="projetos reveal-esquerda" id="projetos">
-      <h2 class="secao__titulo">Projetos</h2>
+      <h2 class="secao__titulo" data-i18n="projetos-titulo">Projetos</h2>
 
       <div class="projetos__grade">
 
@@ -115,7 +117,7 @@
           <img src="assets/images/preview-hospedador-links.png" alt="Captura de tela do projeto Hospedador de Links" class="projeto__preview">
           <div class="projeto__corpo">
             <h3 class="projeto__nome">Hospedador de Links</h3>
-            <p class="projeto__descricao">Agregador de links para usar como cartão de visitas online — reúne seus principais links em uma única página.</p>
+            <p class="projeto__descricao" data-i18n="projeto1-desc">Agregador de links para usar como cartão de visitas online — reúne seus principais links em uma única página.</p>
             <div class="projeto__tecnologias">
               <span class="tag">HTML</span>
               <span class="tag">CSS</span>
@@ -124,7 +126,7 @@
             </div>
             <div class="projeto__links">
               <a href="https://github.com/lucasalves0722/Hospedador-de-links" target="_blank" rel="noopener">GitHub</a>
-              <a href="https://lojatikvah.com.br" target="_blank" rel="noopener">Acessar</a>
+              <a href="https://lojatikvah.com.br" target="_blank" rel="noopener" data-i18n="link-acessar">Acessar</a>
             </div>
           </div>
         </article>
@@ -133,14 +135,14 @@
           <img src="assets/images/preview-ballecoffee.png" alt="Captura de tela do projeto BalleCoffee" class="projeto__preview">
           <div class="projeto__corpo">
             <h3 class="projeto__nome">BalleCoffee</h3>
-            <p class="projeto__descricao">Plataforma de receitas de café, com foco em layout limpo e organização visual do conteúdo.</p>
+            <p class="projeto__descricao" data-i18n="projeto2-desc">Plataforma de receitas de café, com foco em layout limpo e organização visual do conteúdo.</p>
             <div class="projeto__tecnologias">
               <span class="tag">HTML5</span>
               <span class="tag">CSS</span>
             </div>
             <div class="projeto__links">
               <a href="https://github.com/lucasalves0722/DASHBOARD" target="_blank" rel="noopener">GitHub</a>
-              <a href="https://lucasalves0722.github.io/DASHBOARD/" target="_blank" rel="noopener">Acessar</a>
+              <a href="https://lucasalves0722.github.io/DASHBOARD/" target="_blank" rel="noopener" data-i18n="link-acessar">Acessar</a>
             </div>
           </div>
         </article>
@@ -149,14 +151,14 @@
           <img src="assets/images/preview-clone-tinder.png" alt="Captura de tela do projeto Clone do Tinder" class="projeto__preview">
           <div class="projeto__corpo">
             <h3 class="projeto__nome">Clone do Tinder</h3>
-            <p class="projeto__descricao">Clone responsivo da interface do Tinder, desenvolvido para praticar HTML e CSS aplicados a um layout real e conhecido.</p>
+            <p class="projeto__descricao" data-i18n="projeto3-desc">Clone responsivo da interface do Tinder, desenvolvido para praticar HTML e CSS aplicados a um layout real e conhecido.</p>
             <div class="projeto__tecnologias">
               <span class="tag">HTML5</span>
               <span class="tag">CSS</span>
             </div>
             <div class="projeto__links">
               <a href="https://github.com/lucasalves0722/Clone-Tinder-" target="_blank" rel="noopener">GitHub</a>
-              <a href="https://lucasalves0722.github.io/Clone-Tinder-/" target="_blank" rel="noopener">Acessar</a>
+              <a href="https://lucasalves0722.github.io/Clone-Tinder-/" target="_blank" rel="noopener" data-i18n="link-acessar">Acessar</a>
             </div>
           </div>
         </article>
@@ -166,31 +168,31 @@
 
     <section class="github-destaque reveal-esquerda">
       <h2 class="secao__titulo">GitHub</h2>
-      <p class="github-destaque__texto">
+      <p class="github-destaque__texto" data-i18n="github-texto">
         Todo o código dos meus projetos está disponível publicamente no GitHub — incluindo este portfólio. Sinta-se à vontade para explorar os repositórios, ver o histórico de commits e conferir como cada projeto foi construído.
       </p>
-      <a href="https://github.com/lucasalves0722?tab=repositories" target="_blank" rel="noopener" class="botao botao--primario">Ver meus repositórios</a>
+      <a href="https://github.com/lucasalves0722?tab=repositories" target="_blank" rel="noopener" class="botao botao--primario" data-i18n="github-btn">Ver meus repositórios</a>
     </section>
 
     <section class="contato reveal-esquerda" id="contato">
-      <h2 class="secao__titulo">Entre em contato</h2>
+      <h2 class="secao__titulo" data-i18n="contato-titulo">Entre em contato</h2>
 
       <div class="contato__caixa">
         <form id="formulario-contato" novalidate>
 
           <div class="campo" id="campo-nome">
-            <label for="nome">Nome ou empresa</label>
-            <input type="text" id="nome" name="nome" placeholder="Como posso te chamar?">
-            <span class="campo__erro">Por favor, preencha seu nome ou empresa.</span>
+            <label for="nome" data-i18n="contato-label-nome">Nome ou empresa</label>
+            <input type="text" id="nome" name="nome" data-i18n-placeholder="contato-placeholder-nome" placeholder="Como posso te chamar?">
+            <span class="campo__erro" data-i18n="contato-erro-nome">Por favor, preencha seu nome ou empresa.</span>
           </div>
 
           <div class="campo" id="campo-mensagem">
-            <label for="mensagem">Mensagem</label>
-            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte um pouco sobre o motivo do contato..."></textarea>
-            <span class="campo__erro">Por favor, escreva uma mensagem.</span>
+            <label for="mensagem" data-i18n="contato-label-mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="4" data-i18n-placeholder="contato-placeholder-mensagem" placeholder="Conte um pouco sobre o motivo do contato..."></textarea>
+            <span class="campo__erro" data-i18n="contato-erro-mensagem">Por favor, escreva uma mensagem.</span>
           </div>
 
-          <button type="submit" class="botao botao--primario contato__botao">Enviar pelo WhatsApp</button>
+          <button type="submit" class="botao botao--primario contato__botao" data-i18n="contato-btn">Enviar pelo WhatsApp</button>
 
         </form>
       </div>
