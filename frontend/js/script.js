@@ -325,3 +325,10 @@ document.querySelectorAll('.idioma-opcao').forEach(function (botao) {
 });
 
 aplicarTraducoes();
+
+document.querySelectorAll('.idioma-opcao').forEach(function (botao) {
+  const ativo = botao.getAttribute('data-idioma') === idiomaAtual;
+  botao.classList.toggle('idioma-opcao--ativa', ativo);
+});
+
+tituloSobre.textContent = tituloDoSlide(slideAtual);
