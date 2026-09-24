@@ -93,6 +93,7 @@ slider.addEventListener('pointerdown', function (evento) {
   arrastando = true;
   posicaoInicial = evento.clientX;
   track.style.transition = 'none';
+  slider.setPointerCapture(evento.pointerId);
 });
 
 slider.addEventListener('pointermove', function (evento) {
