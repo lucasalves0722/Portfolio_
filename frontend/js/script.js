@@ -269,6 +269,8 @@ const traducoes = {
     'sobre-p1': 'I have worked for 1 year as a Systems Support Analyst, supporting yard management software. This was my first professional experience in technology, starting as an intern and being hired after just two months.',
     'sobre-p2': 'Throughout this experience, I developed a practical understanding of systems, problem analysis, technical support, and process management, while staying constantly in touch with different aspects of technology.',
     'sobre-p3': 'I currently balance my professional routine with programming studies and software development, steering my career toward Full Stack Development.',
+    'sobre-p4': 'Throughout this journey, I have developed a practical understanding of problem analysis and resolution, technical support, processes, and how systems work. I have a degree in Systems Analysis and Development and, alongside my professional experience, I have been deepening my knowledge of programming and software development.',
+    'sobre-p5': 'I am currently pursuing a career in Full Stack Development, seeking to combine my experience in support and systems analysis with my development knowledge to build efficient solutions and grow professionally as a developer.',
     'sobre-slide1-titulo': 'About me',
     'sobre-slide2-titulo': 'Main technologies',
     'projetos-titulo': 'Projects',
