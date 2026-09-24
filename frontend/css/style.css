@@ -674,8 +674,6 @@ body {
 
 /* ===== SELETOR DE IDIOMA ===== */
 
-/* ===== SELETOR DE IDIOMA ===== */
-
 .idioma-switch {
     position: relative;
 
@@ -695,19 +693,14 @@ body {
 /* Pílula que desliza */
 .idioma-switch::before {
     content: "";
-
     position: absolute;
     top: .2rem;
     left: .2rem;
-
-    width: 34px;
+    width: 36px;
     height: 28px;
-
     background-color: var(--cor-destaque);
     border-radius: 7px;
-
     transition: transform .3s ease;
-
     box-shadow: 0 0 10px rgba(45, 212, 191, 0.25);
 }
 
@@ -715,31 +708,34 @@ body {
 .idioma-switch:has(
     .idioma-opcao--ativa[data-idioma="en"]
 )::before {
-    transform: translateX(36px);
+    transform: translateX(39px);
 }
 
 .idioma-opcao {
     position: relative;
     z-index: 1;
-
-    width: 34px;
+    width: 36px;
     height: 28px;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: none;
     background: transparent;
-
     color: var(--cor-texto-secundario);
-
     border-radius: 7px;
-
-    font-size: .8rem;
-    font-weight: 600;
-
+    font-size: 1.1rem;
+    line-height: 1;
     cursor: pointer;
-
     transition:
         color .3s ease,
         transform .2s ease;
+}
+
+.idioma-opcao img {
+    width: 22px;
+    height: auto;
+    display: block;
+    border-radius: 2px;
 }
 
 /* Texto do idioma ativo */
