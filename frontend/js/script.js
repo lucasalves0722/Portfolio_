@@ -128,14 +128,14 @@ slider.addEventListener('pointerleave', function () {
     track.style.transition = 'transform 0.4s ease';
     irParaSlide(slideAtual);
   }
+});
 
-  slider.addEventListener('pointercancel', function () {
+slider.addEventListener('pointercancel', function () {
   if (arrastando) {
     arrastando = false;
     track.style.transition = 'transform 0.4s ease';
     irParaSlide(slideAtual);
   }
-});
 });
 
 const NUMERO_WHATSAPP = '5581997957754';
