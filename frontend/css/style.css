@@ -230,18 +230,50 @@ body {
 /* RESPONSIVIDADE */
 
 @media (max-width: 700px) {
+
     .hero {
         flex-direction: column;
         text-align: center;
+        padding: 3rem 1rem;
+    }
+
+    .hero__foto {
+        width: 180px;
+        height: 180px;
+    }
+
+    .hero__conteudo {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+        line-height: 1.15;
+        margin-bottom: var(--espaco-medio);
     }
 
     .hero__frase {
+        max-width: 100%;
         margin-left: auto;
         margin-right: auto;
+        font-size: 1rem;
     }
 
     .hero__botoes {
         justify-content: center;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .hero h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero__foto {
+        width: 170px;
+        height: 170px;
     }
 }
 
