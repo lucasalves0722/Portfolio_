@@ -474,7 +474,7 @@ body {
 }
 
 .menu__logo span {
-  color: var(--cor-texto);
+    color: var(--cor-texto);
     font-family: 'Orbitron', sans-serif;
     font-weight: 600;
     font-size: 0.75rem;
@@ -482,6 +482,53 @@ body {
     letter-spacing: 2px;
     text-transform: uppercase;
     opacity: 0.35;
+
+    animation: raioDev 2s infinite;
+}
+
+@keyframes raioDev {
+    /* Estado normal */
+    0%,
+    80%,
+    100% {
+        color: var(--cor-texto);
+        opacity: 0.35;
+        text-shadow: none;
+    }
+
+    /* Primeiro flash */
+    82% {
+        color: #fff;
+        opacity: 1;
+        text-shadow:
+            0 0 3px #fff,
+            0 0 8px #fff,
+            0 0 15px rgba(255, 255, 255, 0.8);
+    }
+
+    /* Apaga rapidamente */
+    83% {
+        color: var(--cor-texto);
+        opacity: 0.15;
+        text-shadow: none;
+    }
+
+    /* Segundo flash */
+    84% {
+        color: #fff;
+        opacity: 1;
+        text-shadow:
+            0 0 3px #fff,
+            0 0 8px #fff,
+            0 0 15px rgba(255, 255, 255, 0.8);
+    }
+
+    /* Volta ao estado normal */
+    86% {
+        color: var(--cor-texto);
+        opacity: 0.35;
+        text-shadow: none;
+    }
 }
 
 .menu__lista {
