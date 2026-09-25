@@ -42,8 +42,19 @@ body {
     height: 220px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid var(--cor-destaque);
+    border: none;
     flex-shrink: 0;
+
+    /* Aura ao redor da foto */
+    box-shadow:
+        0 0 15px rgba(45, 212, 191, 0.35),
+        0 0 35px rgba(45, 212, 191, 0.25),
+        0 0 70px rgba(45, 212, 191, 0.15);
+
+    /* Movimento de flutuação */
+    animation:
+        entrarDeBaixo 0.7s ease-out both,
+        flutuarFoto 4s ease-in-out 0.7s infinite;
 }
 
 /*.hero__cargo {
@@ -157,9 +168,19 @@ body {
   }
 }
 
-.hero__foto {
-  animation: entrarDeBaixo 0.7s ease-out both;
+@keyframes flutuarFoto {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
+
+/*.hero__foto {
+  animation: entrarDeBaixo 0.7s ease-out both;
+}*/
 
 .hero__conteudo {
   animation: entrarDeBaixo 0.7s ease-out both;
