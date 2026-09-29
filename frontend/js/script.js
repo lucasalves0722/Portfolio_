@@ -346,21 +346,60 @@ document.querySelectorAll('.idioma-opcao').forEach(function (botao) {
 
 tituloSobre.textContent = tituloDoSlide(slideAtual);
 
+const projetosFallback = [
+  {
+    id: 1,
+    nome: "Hospedador de Links",
+    descricao: "Agregador de links para usar como cartão de visitas online.",
+    tecnologias: ["HTML", "CSS", "JavaScript", "Figma"],
+    imagem: "preview-hospedador-links.png",
+    github: "https://github.com/lucasalves0722/Hospedador-de-links",
+    acessar: "https://lojatikvah.com.br"
+  },
+  {
+    id: 2,
+    nome: "BalleCoffee",
+    descricao: "Plataforma de receitas de café, com foco em layout limpo.",
+    tecnologias: ["HTML5", "CSS"],
+    imagem: "preview-ballecoffee.png",
+    github: "https://github.com/lucasalves0722/DASHBOARD",
+    acessar: "https://lucasalves0722.github.io/DASHBOARD/"
+  },
+  {
+    id: 3,
+    nome: "Clone do Tinder",
+    descricao: "Clone responsivo da interface do Tinder, para praticar HTML e CSS.",
+    tecnologias: ["HTML5", "CSS"],
+    imagem: "preview-clone-tinder.png",
+    github: "https://github.com/lucasalves0722/Clone-Tinder-",
+    acessar: "https://lucasalves0722.github.io/Clone-Tinder-/"
+  }
+];
+
 async function carregarProjetos() {
+  const grade = document.getElementById('projetos-grade');
+  let projetos;
+
   try {
     const resposta = await fetch('http://localhost:8080/api/projetos');
-    const projetos = await resposta.json();
 
-    const grade = document.getElementById('projetos-grade');
-    grade.innerHTML = '';
+    if (!resposta.ok) {
+      throw new Error('Resposta da API não foi bem-sucedida');
+    }
 
-    projetos.forEach(function (projeto) {
-      const card = criarCardProjeto(projeto);
-      grade.appendChild(card);
-    });
+    projetos = await resposta.json();
+    console.log('Projetos carregados da API em Go.');
   } catch (erro) {
-    console.error('Não foi possível carregar os projetos:', erro);
+    console.warn('API Go indisponível, usando dados locais de fallback.', erro);
+    projetos = projetosFallback;
   }
+
+  grade.innerHTML = '';
+
+  projetos.forEach(function (projeto) {
+    const card = criarCardProjeto(projeto);
+    grade.appendChild(card);
+  });
 }
 
 function criarCardProjeto(projeto) {
