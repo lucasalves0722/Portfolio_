@@ -345,3 +345,48 @@ document.querySelectorAll('.idioma-opcao').forEach(function (botao) {
 });
 
 tituloSobre.textContent = tituloDoSlide(slideAtual);
+
+async function carregarProjetos() {
+  try {
+    const resposta = await fetch('http://localhost:8080/api/projetos');
+    const projetos = await resposta.json();
+
+    const grade = document.getElementById('projetos-grade');
+    grade.innerHTML = '';
+
+    projetos.forEach(function (projeto) {
+      const card = criarCardProjeto(projeto);
+      grade.appendChild(card);
+    });
+  } catch (erro) {
+    console.error('Não foi possível carregar os projetos:', erro);
+  }
+}
+
+function criarCardProjeto(projeto) {
+  const article = document.createElement('article');
+  article.className = 'projeto';
+
+  const tagsHtml = projeto.tecnologias
+    .map(function (tecnologia) {
+      return `<span class="tag">${tecnologia}</span>`;
+    })
+    .join('');
+
+  article.innerHTML = `
+    <img src="assets/images/${projeto.imagem}" alt="Captura de tela do projeto ${projeto.nome}" class="projeto__preview">
+    <div class="projeto__corpo">
+      <h3 class="projeto__nome">${projeto.nome}</h3>
+      <p class="projeto__descricao">${projeto.descricao}</p>
+      <div class="projeto__tecnologias">${tagsHtml}</div>
+      <div class="projeto__links">
+        <a href="${projeto.github}" target="_blank" rel="noopener">GitHub</a>
+        <a href="${projeto.acessar}" target="_blank" rel="noopener" data-i18n="link-acessar">Acessar</a>
+      </div>
+    </div>
+  `;
+
+  return article;
+}
+
+carregarProjetos();
